@@ -1,0 +1,410 @@
+/* navbar */
+
+nav a {
+    color: inherit;
+    /* 移除超連結顏色 */
+    text-decoration: none;
+    /* 移除超連結底線 */
+    font-size: 1rem;
+    display: block;
+    font-family: Avenir,sans-serif;
+    letter-spacing: 2px;
+}
+
+.navli {
+    padding: 13px;
+}
+
+ul {
+    list-style: none;
+    /* 移除項目符號 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 滑鼠移到 <a> 時變成深底淺色 */
+nav li:hover {
+    background-color: rgb(146, 15, 15);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.flex-nav {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;  /*文字置中*/
+    margin-left: auto;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .2);
+    background-color: white;
+    padding: 5px;
+}
+
+.logo {
+    padding: 5px;
+    width: 120px;
+    height: 25px;
+    padding-top: 10px;
+
+}
+
+.btn{
+    background-color: rgb(135, 118, 118);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-size: 1.2rem;
+    display: block;
+    padding: 13px;
+    font-family: Avenir,sans-serif;
+    color: white;
+    width: 120px;
+    height: 45px;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: rgb(146, 15, 15);
+}
+
+body { /*背景顏色*/
+    background-color: rgb(238, 234, 230);
+    margin: 0%;
+}
+
+/*購物車*/
+
+h1 {
+    border: none;
+    margin: 20px 0; /*與下面間距*/
+    padding: 0;
+    font-family: Courier New;
+    overflow: scroll; /*自動產生卷軸*/
+}
+
+header.container {
+    margin-bottom: 1.5rem;
+}
+
+header .breadcrumb {
+    color: #7d7d7d;
+}
+
+header .breadcrumb li {
+    float: left;
+    padding: 0 6px;
+    height: 20px;
+    line-height: 20px;
+    font-family: Avenir,sans-serif;
+}
+
+header .breadcrumb li:first-child {
+    padding-left: 2px;
+}
+
+header .breadcrumb li:not(:last-child)::after {
+    content: " \276f";
+    padding-left: 8px;
+}
+
+#header {
+    padding: 70px 230px 10px 320px;
+    margin: 0px;
+}
+
+/*商品內容*/
+
+.item_header {
+    display: flex;
+    width: 770px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    padding:5px;
+    padding-left: 20px;
+}
+
+.item_header div { /*價數總*/
+    width: 200px;
+    color: #888;
+    line-height: 30px;
+    font-family: Avenir,sans-serif;
+}
+
+.item_header .item_detail { /*商品*/
+    width: 80%;
+}
+
+.item_body {
+    margin-top: 20px;
+    height: 100px;
+    align-items: center;
+}
+
+.item_detail img {
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+
+.item_detail .name {
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.cart-btn {
+    display: inline-block;
+    color: rgb(139, 139, 139);
+    font-weight: bold;
+    background-color: transparent;
+    text-align: center;
+    border: none; /*黑色底線刪除*/
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+    width: 20px;
+    height: 20px;
+    margin: 2px
+
+}
+
+.cart-btn:hover {
+    background-color: rgb(135, 118, 118);
+    color: #fff;
+}
+
+.remove {
+    background-color: rgb(135, 118, 118);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer; /*鼠標變點擊*/
+    transition: all 0.3s ease 0s;
+    color: white;
+    width: 60px;
+}
+
+.remove:hover {
+    background-color: rgb(146, 15, 15);
+}
+
+.all {
+    display: flex;
+    height: 430px;
+    width: 1130px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px rgb(0 0 0 / 20%);
+
+}
+
+.head {
+    background-color: rgb(135, 118, 118);
+    border-radius: 3px;
+    height: 30px;
+    padding: 5px;
+    margin-bottom: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 20px;
+    font-weight: bold
+    
+}
+
+.cart {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    text-align: center;
+    height: 430px;
+    width: 330px; /*框內長度*/
+    margin-left: 800px;
+    font-family: Avenir,sans-serif;
+    
+}
+
+#top { /*固定商品*/
+    position: absolute;
+}
+
+.subtotal {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    list-style: none;
+    margin: 10px 0px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.delivery {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    list-style: none;
+    margin: 10px 0px;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    list-style: none;
+    margin: 20px 0px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.cart li {
+    font-size: 14px;
+    color: black;
+
+}
+
+#hr {
+    margin: 20px;
+}
+
+
+/* --- 優惠碼 --- */
+
+.promotion {
+    float: left;
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.promotion>label {
+    float: left;
+    margin-bottom: 1rem;
+}
+
+.promotion>input {
+    float: left;
+    font-size: 1rem;
+    padding: 0.5rem 0 0.5rem 1.8rem;
+    border: 2px solid rgb(135, 118, 118);
+    border-radius: 2rem 0 0 2rem;
+}
+
+.promotion:hover>input {
+    border-color: rgb(146, 15, 15);
+}
+
+.promotion>button {
+    float: left;
+    width: 29%;
+    height: 2.4rem;
+    border-radius: 0 2rem 2rem 0;
+}
+
+.promotion:hover>button {
+    border-color: rgb(146, 15, 15);
+    background-color: rgb(146, 15, 15);
+}
+
+.promotion>button::after {
+    content: "\276f";
+    font-size: 1rem;
+}
+
+button {
+    background-color: rgb(135, 118, 118);
+    border: 2px solid rgb(135, 118, 118);
+    color: #ffffff;
+    transition: all 0.25s linear;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+    transition: all 0.25s linear;
+}
+
+.checkout {
+    float: left;
+    width: 120px;
+}
+
+.checkout>button {
+    font-size: 1.2rem;
+    border-radius: 1.5rem;
+}
+
+.button2 {
+    width: 300px;
+    height: 50px;
+    margin: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.checkout:hover>.button2 {
+    background-color: rgb(146, 15, 15);
+    border-color: rgb(146, 15, 15);
+}
+
+/*footer*/
+
+.footer {
+    background-color: #C6AB8E;
+    height: 100px;
+    margin-top: 50px;
+    width: 100vw;
+    padding: 10px 0 20px;
+
+}
+
+.footer p {
+    font-family: Avenir,sans-serif;
+    float: left;
+    font-size: 14px;
+    color: black;
+    line-height: 75px;
+    padding-left: 320px;
+
+}
+
+  .footer-menu {
+    float: right;
+    line-height: 100px;
+    padding-right: 220px;
+  }
+
+.footer-menu li {
+    float: left;
+    margin-right: 1em;
+    
+}
+
+.footer-menu a {
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-menu a:hover{
+
+    color: rgb(146, 15, 15);
+
+}

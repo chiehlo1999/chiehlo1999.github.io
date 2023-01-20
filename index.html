@@ -1,12 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    hellooo
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinotaeng cart ❀</title>
+    <link rel="stylesheet" href="./webfonts/all.css" type="text/css" />
+    <link href="./css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+    <!--navbar-->
+    <nav>
+        <ul class="flex-nav">
+           <a href="#"><img class="logo" src="./img/logo.png"></a>
+            <li class="navli"><a href="#">HOME</a></li>
+            <li class="navli"><a href="#">ALL</a></li>
+            <li class="navli"><a href="#">HOT</a></li>
+            <li class="navli"><a href="#">NEW</a></li>
+            <li class="navli"><a href="#">CONTACT</a></li>
+            <li class="navli"><a href="#">ABOUT US</a></li>
+            <button class="btn" id="add">CART</button>
+        </ul>
+    </nav>
+
+    <!--購物車頁面-->
+    <div id="header">
+
+        <header class="container">
+            <h1>購物車</h1>
+            <ul class="breadcrumb">
+                <li>HOME</li>
+                <LI>購物車</LI>
+            </ul>
+        </header>
+        <br><hr></br>
+
+        <!--商品價格-->
+        <div class="all">
+            
+            <div id="top">
+            <div class="item_header">
+                <div class="item_detail">商品</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div>
+                <div class="amount">總計</div>
+                <div class="operate"></div>
+            </div>
+
+            <div class="item_container" v-for="(item, index) in itemList" :key="item.id">
+                <div class="item_header item_body">
+                    <div class="item_detail">
+                        <img v-bind:src="item.imgUrl" alt="">
+                        <div class="name">{{item.itemName}}</div>
+                    </div>
+        
+                    <div class="price"><span>$</span>{{item.price}}</div>
+                    <div class="count">
+                        <button class="cart-btn plus" @click="handleSub(item)">-</button>
+                        {{item.count}}
+                        <button class="cart-btn minus" @click="handlePlus(item)">+</button>
+                    </div>
+                    <div class="amount">{{item.price * item.count}}</div>
+                    <div class="operate">
+                        <button class="remove" @click="handledelete(index)">刪除</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cart">
+                        
+            <div class="head">
+                <p>訂單資訊</p>
+            </div>
+
+            <div class="subtotal">
+                <li>小計</li>
+                 <li><span>{{'NT$' + countTotal}}</span></li>
+            </div>
+
+            <div class="delivery">
+                <li>運費</li>
+                <li>NT$60</li>
+            </div>
+
+            <!--優惠碼-->
+            <div class="promotion">
+                <label>請輸入優惠券代碼：</label>
+                <input type="text" id="promo-code" /> <button type="button" onclick="myFunction()"></button>
+                <script>
+                    function myFunction() {
+                        alert("您的優惠券代碼無效。請重新檢查代碼是否填寫有誤及英文字母大小寫是否符合。");
+                    }
+                </script>
+            </div>
+
+            <hr id="hr">
+
+            <!--合計金額-->
+            <div class="total">
+                <li>總計</li>
+                <li><span>{{'NT$' + totalPrice}}</span></li>
+            </div>
+
+            <div class="checkout">
+                <button class="button2" onclick="myFunction2()">前往結帳</button>
+                    <script>
+                        function myFunction2() {
+                            alert("購買成功！");
+                        }
+                    </script>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <!--footer-->
+         <footer class="footer">
+                    <p>©DINOTAENG. ALL RIGHT RESERVED.<p>
+
+                <ul class="footer-menu">
+
+                    <li><a href="https://www.facebook.com/dinotaeng.official"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/dinotaeng/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="mailto:dinotaeng@dinotaeng.com"><i class="fa-solid fa-envelope"></i></a></li>
+
+                    <div class="clearfix"></div>
+                </ul>
+                 
+         </footer>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
 </html>
