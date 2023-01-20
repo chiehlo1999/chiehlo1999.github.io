@@ -87,7 +87,6 @@ h1 {
     margin: 20px 0; /*與下面間距*/
     padding: 0;
     font-family: Courier New;
-    overflow: scroll; /*自動產生卷軸*/
 }
 
 header.container {
